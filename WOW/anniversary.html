@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary My Love • Phumelele</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
+
+  :root {
+    --rose: #c97b84;
+    --deep-rose: #8b3a42;
+    --cream: #f8f1e9;
+    --gold: #d4af37;
+    --soft-gold: #e8d5a3;
+    --ink: #2c1e1e;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a0f0f 0%, #2c1a1a 40%, #3d2222 100%);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Floating hearts background */
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .heart {
+    position: absolute;
+    font-size: 18px;
+    color: rgba(201, 123, 132, 0.25);
+    animation: floatHeart linear infinite;
+  }
+
+  @keyframes floatHeart {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Main container */
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 1.4s ease-out;
+  }
+
+  .anniversary-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--deep-rose), var(--rose));
+    color: white;
+    padding: 8px 28px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(139, 58, 66, 0.4);
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    color: var(--soft-gold);
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--rose);
+    letter-spacing: 1px;
+  }
+
+  .date-time {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    color: var(--soft-gold);
+    opacity: 0.9;
+  }
+
+  .school-note {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #c9a9a9;
+    font-style: italic;
+  }
+
+  /* 3D Card effect */
+  .love-card {
+    background: linear-gradient(145deg, rgba(60, 30, 30, 0.85), rgba(40, 20, 20, 0.9));
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin: 40px 0;
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: cardFloat 6s ease-in-out infinite;
+  }
+
+  .love-card:hover {
+    transform: rotateY(4deg) rotateX(2deg) scale(1.02);
+  }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Names & nicknames */
+  .her-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: var(--soft-gold);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .nicknames {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .nickname {
+    display: inline-block;
+    margin: 6px 10px;
+    padding: 6px 18px;
+    background: rgba(201, 123, 132, 0.15);
+    border: 1px solid rgba(201, 123, 132, 0.3);
+    border-radius: 30px;
+    font-style: italic;
+    color: var(--rose);
+    font-size: 1.15rem;
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .nickname:nth-child(2) { animation-delay: 0.5s; }
+  .nickname:nth-child(3) { animation-delay: 1s; }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 rgba(201, 123, 132, 0); }
+    50% { box-shadow: 0 0 15px rgba(201, 123, 132, 0.35); }
+  }
+
+  /* Letters section */
+  .letter {
+    margin: 35px 0;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    position: relative;
+  }
+
+  .letter-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .letter p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e8d9d0;
+  }
+
+  .letter.italian { border-left-color: #c97b84; }
+  .letter.zulu { border-left-color: #8b3a42; }
+
+  /* Image placeholders */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 50px 0;
+  }
+
+  .photo-frame {
+    aspect-ratio: 1;
+    background: linear-gradient(145deg, #3a2222, #2a1818);
+    border: 2px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+  }
+
+  .photo-frame:hover {
+    transform: scale(1.05) rotate(1deg);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+  }
+
+  .photo-frame::before {
+    content: "♡";
+    position: absolute;
+    font-size: 2.5rem;
+    color: rgba(201, 123, 132, 0.3);
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photo-label {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.85rem;
+    color: var(--soft-gold);
+    opacity: 0.7;
+  }
+
+  /* Countdown */
+  .countdown-section {
+    text-align: center;
+    margin: 60px 0 40px;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, rgba(139, 58, 66, 0.3), rgba(60, 30, 30, 0.5));
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .countdown-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--soft-gold);
+    margin-bottom: 8px;
+  }
+
+  .countdown-sub {
+    font-size: 1rem;
+    color: #c9a9a9;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .time-box {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: 15px 12px;
+    min-width: 80px;
+    transform-style: preserve-3d;
+    animation: boxPulse 4s ease-in-out infinite;
+  }
+
+  .time-box:nth-child(2) { animation-delay: 0.5s; }
+  .time-box:nth-child(3) { animation-delay: 1s; }
+  .time-box:nth-child(4) { animation-delay: 1.5s; }
+
+  @keyframes boxPulse {
+    0%, 100% { transform: translateZ(0); }
+    50% { transform: translateZ(10px); }
+  }
+
+  .time-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    display: block;
+  }
+
+  .time-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c9a9a9;
+  }
+
+  /* Footer message */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .final-message {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--soft-gold);
+    margin-bottom: 10px;
+  }
+
+  .signature {
+    font-style: italic;
+    color: var(--rose);
+    font-size: 1.1rem;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .love-card { padding: 25px 18px; }
+    .her-name { font-size: 1.9rem; }
+    .time-box { min-width: 70px; padding: 12px 8px; }
+    .time-value { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating hearts -->
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="anniversary-badge">Happy Anniversary</div>
+    <h1>Phumelele Mdlalose</h1>
+    <p class="subtitle">To the one who stole my heart</p>
+    <p class="date-time">October 24 • 4:00 PM</p>
+    <p class="school-note">Where love found its path… at school</p>
+  </header>
+
+  <!-- Main love card -->
+  <div class="love-card">
+    <div class="her-name">Phumelele</div>
+    <div class="nicknames">
+      <span class="nickname">Mi Amore</span>
+      <span class="nickname">My Love</span>
+      <span class="nickname">Principessa</span>
+    </div>
+
+    <!-- English letter -->
+    <div class="letter fade-in" style="animation-delay: 0.3s">
+      <div class="letter-title">My Dearest Love</div>
+      <p>
+        Today we celebrate the day our hearts decided they belonged together. 
+        From the first moment our eyes met in those school corridors, something 
+        beautiful began. You are my peace, my laughter, my home. Every day with 
+        you feels like a quiet miracle. Happy Anniversary, my love.
+      </p>
+    </div>
+
+    <!-- Italian letter -->
+    <div class="letter italian fade-in" style="animation-delay: 0.6s">
+      <div class="letter-title">Mia Cara</div>
+      <p>
+        Il mio cuore batte solo per te. Sei la mia luce, la mia principessa, 
+        il mio amore eterno. Ogni giorno al tuo fianco è un regalo. 
+        Ti amo più di quanto le parole possano dire. Buon Anniversario, 
+        mi amore.
+      </p>
+    </div>
+
+    <!-- Zulu letter -->
+    <div class="letter zulu fade-in" style="animation-delay: 0.9s">
+      <div class="letter-title">Sithandwa Sami</div>
+      <p>
+        Ngiyakuthanda kakhulu, Phumelele. Wena uyisibusiso empilweni yami. 
+        Kusukela ngalolo suku esahlangana esikoleni, inhliziyo yami 
+        yathola ikhaya. Ngiyakuthanda kakhulu, mi amore. 
+        Usuku lwethu lwothando luyajabulela!
+      </p>
+    </div>
+  </div>
+
+  <!-- Image gallery – 4 placeholders -->
+  <div class="gallery">
+    <div class="photo-frame">
+      <!-- Replace the src below with your image path -->
+      <img src="quenn.jpg" alt="Our moment 1">
+      <span class="photo-label">My Quenn</span>
+    </div>
+    <div class="photo-frame">
+      <img src="smile.jpg" alt="Our moment 2">
+      <span class="photo-label">I Love that smile</span>
+    </div>
+    <div class="photo-frame">
+      <img src="coolest.jpg" alt="Our moment 3">
+      <span class="photo-label">Coolest woman</span>
+    </div>
+    <div class="photo-frame">
+      <img src="boom-final.jpg" alt="Our moment 4">
+      <span class="photo-label">Forever starts here</span>
+    </div>
+  </div>
+
+  <!-- Countdown to May 20, 2027 -->
+  <div class="countdown-section fade-in" style="animation-delay: 1.2s">
+    <div class="countdown-title">When wll the love end?</div>
+    <p class="countdown-sub">Never, We are bound.</p>
+    <div class="countdown" id="countdown">
+      <div class="time-box">
+        <span class="time-value" id="days">00</span>
+        <span class="time-label">Days</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value" id="hours">00</span>
+        <span class="time-label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value" id="minutes">00</span>
+        <span class="time-label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value" id="seconds">00</span>
+        <span class="time-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="final-message">Forever yours</div>
+    <p class="signature">With all my heart • Happy Anniversary, Phumelele
+<br>I couldn't make the webpage look elegant although i did try in an hour.</br>
+    </p>
+  </footer>
+
+</div>
+<script>
+  // Create floating hearts
+  const heartsContainer = document.getElementById('hearts');
+  const heartSymbols = ['♥', '♡', '❤', '💕'];
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 20 + 12) + 'px';
+    heart.style.animationDuration = (Math.random() * 8 + 10) + 's';
+    heart.style.animationDelay = Math.random() * 5 + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 18000);
+  }
+
+  // Spawn hearts continuously
+  setInterval(createHeart, 600);
+  for (let i = 0; i < 15; i++) setTimeout(createHeart, i * 300);
+
+  // Countdown to May 20, 2027 00:00:00
+  const targetDate = new Date('2027-05-20T00:00:00').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById('countdown').innerHTML = 
+        '<div style="font-size:1.4rem;color:var(--gold)">The special day has arrived ❤️</div>';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Gentle 3D tilt on the love card with mouse
+  const card = document.querySelector('.love-card');
+  if (card) {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -6;
+      const rotateY = ((x - centerX) / centerX) * 6;
+      card.style.transform = perspective(1000px) rotateX(\( {rotateX}deg) rotateY( \){rotateY}deg) scale(1.02);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+  }
+</script>
+</body>
+</html>
